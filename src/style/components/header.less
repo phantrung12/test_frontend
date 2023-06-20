@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  background-color: white;
+  padding-right: 50px;
+  transition: all 0.25s;
+  .header-divider {
+    height: 2rem;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.flag {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid @gray-6;
+}
+
+.open-header {
+  padding-left: calc(@sidebar-open-width + 24px);
+}
+
+.close-header {
+  padding-left: calc(@sidebar-close-width + 24px);
+}
+
+.btn-flag {
+  display: flex;
+  align-items: center;
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

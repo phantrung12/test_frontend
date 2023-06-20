@@ -1,0 +1,27 @@
+{
+  "common": {
+    "username": "Username",
+    "password": "Password"
+  },
+  "button": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "back": "Back",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "sidebar": {
+    "home": "Home"
+  },
+  "home": {
+    "title": "Home"
+  },
+  "form": {
+    "title":"Form",
+    "addNew": "Add new",
+    "update": "Update",
+    "delete": "Delete"
+  }
+}

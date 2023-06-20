@@ -1,0 +1,29 @@
+.layout {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    z-index: 10;
+    box-shadow: 0 12px 30px rgba(80,143,244,.1);
+    background-color: @neutral-6;
+    .logo {
+      height: 64px;
+    }
+  }
+
+  .content {
+    margin-top: 64px;
+    margin-left: 200px;
+    padding: 24px;
+    transition: all 0.25s;
+  }
+  .open-content{
+    margin-left: 200px;
+  }
+  .close-content{
+    margin-left: 80px;
+  }
+}
