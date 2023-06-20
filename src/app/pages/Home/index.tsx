@@ -59,7 +59,7 @@ const Home = () => {
         collapsed={collapsed}
         className="sidebar"
       >
-        <div className="logo">Logo</div>
+        <div className="logo"></div>
         <Menu
           theme="light"
           mode="inline"
