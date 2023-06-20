@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { IPost } from '../../../types/Post.type';
 import axios from 'axios';
 import DetailPost from './component/DetailPost';
-import { debounce } from 'lodash';
+import { debounce, reject } from 'lodash';
 import { ColumnsType } from 'antd/lib/table';
 import { EyeOutlined } from '@ant-design/icons';
 import './postManagement.less';
@@ -11,13 +11,18 @@ import './postManagement.less';
 const PostManagement = () => {
   const [postList, setPostList] = useState();
   const [postDetail, setPostDetail] = useState<IPost>();
+  const [loading, setLoading] = useState(false);
 
   const getPostsList = async (userId?: string) => {
+    setLoading(true);
     const res = await axios.get('https://jsonplaceholder.typicode.com/posts', {
       params: userId ? { userId } : null,
     });
     if (res.status === 200) {
+      setLoading(false);
       setPostList(res.data);
+    } else {
+      setLoading(false);
     }
   };
 
@@ -74,6 +79,7 @@ const PostManagement = () => {
       </Space>
       <Table
         rowKey={record => record.id}
+        loading={loading}
         columns={columns}
         dataSource={postList}
         pagination={{ position: ['bottomRight'] }}
