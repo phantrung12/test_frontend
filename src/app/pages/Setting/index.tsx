@@ -1,4 +1,4 @@
-import { Button, Col, Input, Row, Space, DatePicker } from 'antd';
+import { Button, Col, Input, Row, Space, DatePicker, Typography } from 'antd';
 import React, { useState } from 'react';
 import FormItem from '../../components/FormItem';
 import { Controller, useForm } from 'react-hook-form';
@@ -54,6 +54,7 @@ const Setting = () => {
 
   return (
     <div className="setting">
+      <Typography.Title level={4}>Setting</Typography.Title>
       <Row gutter={[32, 32]}>
         <Col span={12}>
           <Controller

@@ -1,4 +1,4 @@
-import { Tabs } from 'antd';
+import { Tabs, Typography } from 'antd';
 import React from 'react';
 import { path } from '../../routes/path';
 import { Outlet, useNavigate } from 'react-router';
@@ -26,6 +26,7 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Typography.Title level={4}>Dashboard</Typography.Title>
       <Tabs
         items={tabItems}
         type="card"

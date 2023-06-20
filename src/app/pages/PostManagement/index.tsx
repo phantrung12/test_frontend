@@ -1,4 +1,4 @@
-import { Button, Input, Space, Table } from 'antd';
+import { Button, Input, Space, Table, Typography } from 'antd';
 import React, { useCallback, useEffect, useState } from 'react';
 import { IPost } from '../../../types/Post.type';
 import axios from 'axios';
@@ -70,6 +70,7 @@ const PostManagement = () => {
 
   return (
     <div className="post-manage-container">
+      <Typography.Title level={4}>Post management</Typography.Title>
       <Space className="w-100 justify-end mb-24">
         <Input
           defaultValue={''}
