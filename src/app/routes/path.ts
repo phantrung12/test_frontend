@@ -1,6 +1,6 @@
 export const path = {
   home: '/',
-  dashboard: '/dashboard/*',
+  dashboard: 'dashboard/*',
   dashboardSubtab: {
     subscription: 'subscription',
     revenue: 'revenue',

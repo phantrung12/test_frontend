@@ -1,17 +1,6 @@
 import { Navigate, Route, Routes, useRoutes } from 'react-router-dom';
 import { path } from './path';
 import Home from '../pages/Home';
-import Login from '../pages/Auth';
-import PrivateRoute from '../components/HOC/PrivateRoute';
-import AlertDemo from '../pages/Alert';
-import ButtonDemo from '../pages/Button';
-import UIKit from '../pages/UIKit';
-import NotificationDemo from '../pages/Notification';
-import Form from '../pages/Form';
-import CreateForm from '../pages/Form/containers/Create';
-import UpdateForm from '../pages/Form/containers/Update';
-import DetailForm from '../pages/Form/containers/Detail';
-import ModalDemo from '../pages/Modal';
 import Dashboard from '../pages/Dashboard';
 import PostManagement from '../pages/PostManagement';
 import Setting from '../pages/Setting';
@@ -45,6 +34,6 @@ export default function AppRoutes() {
         { path: path.settings, element: <Setting /> },
       ],
     },
-    { path: path.all, element: <Navigate to={path.home} /> },
+    { path: path.all, element: <Navigate to={path.dashboard} replace /> },
   ]);
 }
